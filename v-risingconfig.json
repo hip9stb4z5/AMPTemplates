@@ -2092,6 +2092,23 @@
         "Hidden": true
     },
     {
+        "DisplayName": "HideIPAddress",
+        "Category": "V Rising:stadia_controller",
+        "Subcategory": "Host:dns:7",
+        "Description": "When listing server on EOS server list, the IP address will not be shown/advertised. Players will connect via relay servers",
+        "Keywords": "server, secure",
+        "FieldName": "Secure",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "HideIPAddress",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "true",
+        "EnumValues": {
+            "True": "true",
+            "False": "false"
+        }
+    },
+    {
         "DisplayName": "RCON Port",
         "Category": "V Rising:stadia_controller",
         "Subcategory": "Host:dns:7",
@@ -2171,13 +2188,44 @@
         "DisplayName": "Server FPS",
         "Category": "V Rising:stadia_controller",
         "Subcategory": "Host:dns:7",
-        "Description": "Maximum Server FPS when idle",
+        "Description": "Target FPS for server",
         "Keywords": "server, fps",
         "FieldName": "ServerFps",
         "InputType": "number",
         "IsFlagArgument": false,
         "ParamFieldName": "ServerFps",
         "DefaultValue": "30",
+        "IncludeInCommandLine": false,
+        "Suffix": "FPS"
+    },
+    {
+        "DisplayName": "Lower FPS When Empty",
+        "Category": "V Rising:stadia_controller",
+        "Subcategory": "Host:dns:7",
+        "Description": "Run the server at a lower framerate target when no players are logged in",
+        "Keywords": "server, lowerfps",
+        "FieldName": "LowerFPSWhenEmpty",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "LowerFPSWhenEmpty",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "true",
+        "EnumValues": {
+            "True": "true",
+            "False": "false"
+        }
+    },
+    {
+        "DisplayName": "Server FPS When Empty",
+        "Category": "V Rising:stadia_controller",
+        "Subcategory": "Host:dns:7",
+        "Description": "Set the framerate target for when Lower FPS When Empty is active",
+        "Keywords": "server, lowfps",
+        "FieldName": "LowerFPSWhenEmptyValue",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "LowerFPSWhenEmptyValue",
+        "DefaultValue": "15",
         "IncludeInCommandLine": false,
         "Suffix": "FPS"
     },
